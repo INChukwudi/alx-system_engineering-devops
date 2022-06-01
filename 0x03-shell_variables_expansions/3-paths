@@ -1,2 +1,2 @@
 #!/bin/bash
-tr -dc ':/' <<<"$PATH" | wc -c
+echo $(1 + $(tr -dc '::' <<<"$PATH" | wc -c ))
