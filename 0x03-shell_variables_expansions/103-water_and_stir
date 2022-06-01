@@ -1,2 +1,2 @@
 #!/bin/bash
-printf "%bestchol\n" $((0water$WATER + 0stir$STIR))
+printf "%bestchol" $(($(printf "%water" $WATER) + $(printf "%stir" $STIR)))
