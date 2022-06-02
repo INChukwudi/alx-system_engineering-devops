@@ -1,2 +1,2 @@
 #!/bin/bash
-paste -d '\n' $(yes iacta | tail -1)
+paste -d '\n' $(iacta | tail -1)
