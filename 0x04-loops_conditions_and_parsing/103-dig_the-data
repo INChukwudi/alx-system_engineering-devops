@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Bash script that parses an Apache log access file, gropus and sorts the data
+
+awk '{print $1 " " $9}' apache-access.log | sort | uniq -c | sort -rn
