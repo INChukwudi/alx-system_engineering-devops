@@ -17,7 +17,7 @@ file { ["/var/www/","/var/www/html"]:
   mode   => "0644",
 }
 
-file { "{$doc_root}/index.html":
+file { "$doc_root/index.html":
   ensure  => "present",
   content => "Hello World!",
   require => File[$doc_root],
