@@ -10,7 +10,7 @@ package { 'nginx':
   require => Exec['apt-get update'],
 }
 
-file { $doc_root:
+file { ["/var/www/","/var/www/html"]:
   ensure => "directory",
   owner  => "www-data",
   group  => "www-data",
