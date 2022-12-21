@@ -1,3 +1,4 @@
+# File that installs nginx, and sets it up to have a custome header
 $doc_root = "/var/www/html"
 
 exec { 'apt-get update':
