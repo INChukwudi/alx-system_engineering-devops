@@ -34,7 +34,7 @@ file { "/etc/nginx/sites-available/default":
   content => "server {
     listen 80;
     listen [::]:80 default_server;
-    add_header X-Served-By $HOSTNAME;
+    add_header X-Served-By $trusted['hostname'];
     root   /var/www/html;
     index  index.html index.htm;
 
