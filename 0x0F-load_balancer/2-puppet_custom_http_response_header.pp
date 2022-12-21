@@ -10,7 +10,7 @@ package { 'nginx':
   require => Exec['apt-get update'],
 }
 
-file { $doc_root:
+file { ["/var/www/","/var/www/html/"]:
   ensure => "directory",
   owner  => "www-data",
   group  => "www-data",
@@ -34,7 +34,7 @@ file { "/etc/nginx/sites-available/default":
   content => "server {
     listen 80;
     listen [::]:80 default_server;
-    add_header X-Served-By $trusted['hostname'];
+    add_header X-Served-By \$HOSTNAME;
     root   /var/www/html;
     index  index.html index.htm;
 
