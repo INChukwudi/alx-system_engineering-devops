@@ -1,4 +1,4 @@
-#1/usr/bin/python3
+#!/usr/bin/python3
 """
 Recursive function that queries the Reddit API
 Returns a list containing the titles of all hot articles
